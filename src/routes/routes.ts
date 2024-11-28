@@ -2,8 +2,8 @@ import { Router,Request,Response } from "express";
 
 const router = Router();
 
-router.get("/",(req:Request,res:Response)=>{            
-    res.json({message:"Hello world!"});
+router.get("/test",(req:Request,res:Response)=>{            
+   throw new Error("erro ao fazer a requisição");
 });
 
 export default router;
