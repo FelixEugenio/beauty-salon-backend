@@ -13,3 +13,15 @@ export interface UpdateUserDTO{
     banner?: string,
     phoneNumber: string
 }
+
+export interface LoginUserDTO{
+    email: string,
+    password: string
+}
+
+export interface UserResponseDTO{
+    name: string,
+    email: string,
+    banner?: string,
+    phoneNumber: string
+}

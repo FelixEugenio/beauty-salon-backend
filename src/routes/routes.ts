@@ -1,9 +1,10 @@
-import { Router,Request,Response } from "express";
+import { Router} from "express";
+import { UserController } from "../controllers/Users/userController";
 
 const router = Router();
+const userController = new UserController();
 
-router.get("/test",(req:Request,res:Response)=>{            
-   throw new Error("erro ao fazer a requisição");
-});
+router.post('/users',userController.register);
+router.post('/login',userController.login);
 
 export default router;
